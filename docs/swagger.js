@@ -22,6 +22,10 @@ const swaggerDefinition = {
             url: 'http://localhost:8080',
             description: 'Development server',
         },
+        {
+            url: 'https://thawing-caverns-36216.herokuapp.com',
+            description: 'Heroku server',
+        },
     ],
     components: {
         securitySchemes:{

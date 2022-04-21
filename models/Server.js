@@ -56,7 +56,7 @@ class Server {
 
     listen(){
         this.app.listen( this.PORT, ()=>{
-            console.log(`Servidor corriendo en localhost:${this.PORT}`)
+            console.log(`Servidor corriendo en el puerto: ${this.PORT}`)
             this.dbConnect();
         })
     }
