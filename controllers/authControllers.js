@@ -53,11 +53,12 @@ const authRegister = async (req, res ) =>{
         usuario = await User.create( datos );
         usuario.password = null;
 
+        const sendgrid_email = process.env.SENDGRID_EMAIL;
         const msg = {
             to: usuario.email,
-            from: 'testprogramerraul@gmail.com', // Use the email address or domain you verified above
-            subject: 'Email de confirmacion de cuenta',
-            text: 'Email de confirmacion de cuenta, este mensaje confirma la creacion de la cuenta de Disney pc',
+            from: sendgrid_email, // Use the email address or domain you verified above
+            subject: 'Tu cuenta ha sido creada correctamente',
+            text: 'Felicidades por tu nueva cuenta, ya eres parte de nuestra familia!',
             html: '<h1>Se confirmo la cuenta con exito</h1>',
         };
 
